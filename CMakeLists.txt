@@ -18,6 +18,8 @@ find_package(rclcpp_components REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(vision_msgs REQUIRED)
 
+link_directories(/usr/local/cuda/lib64)
+
 add_library(openrobotics_darknet_ros SHARED
   src/detector_network.cpp
   src/parse.cpp)
